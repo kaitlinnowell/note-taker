@@ -10,8 +10,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
 
-app.use('/', pageRouter);
 app.use('/', apiPageRouter);
+app.use('/', pageRouter);
 
 app.listen(PORT, () => {
   console.info(`Server started on http://localhost:${PORT}`);

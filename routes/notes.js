@@ -6,8 +6,7 @@ const fs = require('fs');
 const uuid = require('../helpers/uuid');
 
 apiPageRouter.get('/api/notes', (req, res) => {
-    console.log('hit get route')
-    // Obtain existing reviews
+    // Obtain existing notes
     fs.readFile('./db/db.json', 'utf8', (err, data) => {
       if (err) {
         console.error(err);
@@ -38,7 +37,7 @@ apiPageRouter.post('/api/notes', (req, res) => {
       id: uuid(),
     };
 
-    // Obtain existing reviews
+    // Obtain existing notes
     fs.readFile('./db/db.json', 'utf8', (err, data) => {
       if (err) {
         console.error(err);
@@ -46,10 +45,10 @@ apiPageRouter.post('/api/notes', (req, res) => {
         // Convert string into JSON object
         const parsedNotes = JSON.parse(data);
 
-        // Add a new review
+        // Add a new note
         parsedNotes.push(newNote);
 
-        // Write updated reviews back to the file
+        // Write updated notes back to the file
         fs.writeFile(
           './db/db.json',
           JSON.stringify(parsedNotes, null, 4),

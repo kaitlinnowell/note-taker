@@ -18,5 +18,15 @@
         "title": "New",
         "text": "Another note......",
         "id": "cd69"
+    },
+    {
+        "title": "This Note",
+        "text": "is great",
+        "id": "1724"
+    },
+    {
+        "title": "Kaitlin's Note",
+        "text": "is cool",
+        "id": "53d4"
     }
 ]
