@@ -73,9 +73,9 @@ apiPageRouter.post('/api/notes', (req, res) => {
 });
 
 apiPageRouter.delete('/api/notes', (req, res) => {
-
+    //To-Do later
 });
 
 
-
+//exports
 module.exports = { apiPageRouter };
